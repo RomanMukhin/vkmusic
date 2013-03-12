@@ -1,0 +1,9 @@
+%h2#header_list=I18n.t('playlists')
+= form_for(List.new, url: lists_path, remote: true) do |l|
+  = l.text_field 'title',  placeholder: 'New playlist name...', class: "input-medium"            
+  -#
+  = l.text_field 'description', placeholder: 'Playlist description...', class: "input-large"                                                
+  = l.submit "Create", class: "btn btn-medium btn-primary"
+%ul.nav.nav-pills.lists-all
+  - unless @list == nil
+    = render partial: 'lists/list', locals: { lists: @lists }

@@ -1,0 +1,58 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h3 + table {
+  margin-top: 10px;
+}
+
+td.wide {
+  width: 100%;
+}
+
+h2{
+  background:none !important;
+  border-bottom:2px black solid !important;
+  color: black !important;
+}
+.nav-pills{border-bottom:2px black solid !important;}
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+.input-mysize { 
+    width: 350px;
+    margin:5px 0;
+}
+#header_list{
+  width: 100%;
+  /*margin:0;
+  padding:0;*/
+  padding-bottom: 0;
+}
+ul.playlist li .comment {
+    font-size:0.65em;
+    opacity:0.5;
+    display: block;
+    position: relative;
+    top:-21px;
+    float:right;
+}
+
+#sm2-container {
+    padding: 0;
+    margin: 0;
+    height:0;
+    position:relative;
+    left:-1000px;
+}
+
+.play {
+  list-style: none;
+  h1{ 
+     width:100%;
+  }
+}

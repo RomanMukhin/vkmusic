@@ -1,0 +1,20 @@
+.navbar.navbar-fixed-top.navbar-inverse.clearfix
+  .navbar-inner.clearfix
+    .container
+      %ul.nav
+        .span3
+          %li.brand VKMusic
+        - if logged_in?
+          .span7
+            = link_to search_my_music_path, method: :post, class: "pull-left" do
+              %i.icon-home.icon-white
+            %li
+              = form_tag search_path, :remote => true do
+                = text_field_tag 'search', nil, :placeholder => 'Begin your search...', :class=>"search-query input-mysize"
+                = submit_tag "search", :hidden => true
+          %li.right.pad_right
+            = link_to 'Выход', logout_path, method: :delete
+          %li.right.pad_right
+            = link_to @user.vk_url, target: '_blank' do
+              = @user.photo
+              = @user.fio

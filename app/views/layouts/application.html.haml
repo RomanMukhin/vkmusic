@@ -1,0 +1,21 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title=t('app_name')
+    = csrf_meta_tags
+    /[if lt IE 9]
+      = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+    = stylesheet_link_tag 'application', media: 'all'
+    %meta{:content => "noindex", :name => "robots"}/
+    = javascript_include_tag 'application'
+    = render 'shared/load'
+  %body
+    = render 'shared/menu'
+    .container.max-height.no-overflow
+      = render 'shared/alert' if flash[:alert]
+      = yield
+    = yield :javascript
+    %footer
+      %p=t('logo')

@@ -1,0 +1,8 @@
+$(".songs-all").html('<%=j render partial: 'songs/songs', locals: { songs: @list.songs} %>');
+<% @lists.each do |l|%>
+  $(".lists-all #list_"+<%=l.id%>).removeClass("active");
+<%end%>
+$(".lists-all #list_"+<%=@list.id%>).addClass("active");
+document.getElementById("list_title").value='' ;
+document.getElementById("list_description").value='' ;
+document.getElementById("#search").value='' ;

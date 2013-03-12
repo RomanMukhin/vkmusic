@@ -1,0 +1,13 @@
+.content
+  .row.pad
+  .row
+    .span4
+    .span5
+      %h2.title_session=t('session_new.app_description')
+  .row
+    .span5
+    .span3
+      %p
+        = link_to @vk_url, class: 'btn btn-primary' do
+          %i.icon-home.icon-white
+          =I18n.t('session_new.auth_button')

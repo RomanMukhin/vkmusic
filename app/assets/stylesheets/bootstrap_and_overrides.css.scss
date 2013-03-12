@@ -1,0 +1,24 @@
+@import "bootstrap";
+body { padding-top: 40px; }
+.container{
+	width: 1400px !important;
+    
+    margin: 0 auto;
+    .span7{
+      width:600px !important;
+    }
+}
+.pad_right{
+	position: relative;
+	right: 100px;
+}
+.navbar .nav{
+    display: inline !important;
+    float: none !important;
+}
+form { margin-bottom: 0 !important}
+@import "bootstrap-responsive";
+
+
+
+

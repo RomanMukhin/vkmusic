@@ -1,0 +1,13 @@
+- songs.each do |song|
+  %li.handle{:id => "song_#{song.id}"}
+    = link_to song.url do
+      = song.short_name
+    %span.comment= song.formatted_duration
+    = form_tag song_path(song.id), :method => 'delete', remote: true do
+      = submit_tag "",:class=>"icon-trash plus inv"
+    = form_tag download_path(song.id) do
+      = submit_tag "",:class=>"icon-download plus inv"
+.row
+  .span2
+  #drop.span2= "Add some audios." if songs.empty?
+  .span2

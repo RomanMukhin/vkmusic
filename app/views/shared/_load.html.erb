@@ -1,0 +1,32 @@
+<% content_for :javascript do %>
+  <%= javascript_tag do %>
+    $("#drop").disableSelection();
+      $('#drop').sortable({
+        cursor: 'crosshair',
+        items: 'li',
+        opacity: 0.4,
+        update: function(){
+        $.ajax({
+        type: 'post',
+        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+        data: $('#drop').sortable('serialize'),
+        dataType: 'script',
+        complete: function(request){
+        $('#drop').effect('highlight');
+        },
+        url: '/songs/sort'})
+        }
+      });
+    $("li").live("hover",function () {
+        $(this).children(".comment").toggleClass("display_none");
+        $(this).children("form").children(".plus").toggleClass("inv");
+      });
+      $(".scroll").niceScroll({cursorborder:"",cursorcolor:"#00F",boxzoom:true});
+      $('h2, .brand').mousedown(function(){ return false; });
+      // Sorting the list
+      <% unless @list == nil%>
+        $(".songs-all").html('<%=j render partial: 'songs/songs', locals: { songs: @list.songs} %>');
+        $(".lists-all #list_"+<%=@list.id%>).addClass("active");
+      <%end%>   
+  <% end %>
+<% end %>

@@ -1,0 +1,5 @@
+$(".lists-all").html('<%=j render partial: 'lists/list', locals: { lists: @lists} %>');
+$(".songs-all").html('<%=j render partial: 'songs/songs', locals: { songs: @list.songs} %>');
+$(".lists-all #list_<%=@list.id%>").addClass("active");
+document.getElementById("list_title").value='' ;
+document.getElementById("list_description").value='' ;

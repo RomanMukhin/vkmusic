@@ -1,0 +1,28 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  alert:
+    callback: "Ошибка авторизации, попробуйте войти еще раз."
+  hello: "Hello world"
+  logo: "2013 © RubyGarage Winter course"
+  app_name: "VKMusic"
+  search_placeholder: "Begin your search..."
+  find_audio: "Аудиозаписи:"
+  playlists: "Списки воспроизведения:"
+  simple_form:
+    placeholders:
+      user:
+        name: 'New playlist name...'
+        description: 'Playlist description...'
+        find: 'Begin your search...'
+  session_new:
+    app_description: 'Music from VK.com on Rails'
+    auth_button: 'Войти через ВКонтакте'
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "..."

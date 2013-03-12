@@ -1,0 +1,17 @@
+= paginate audios, remote: true, :window => 2
+- audios.each do |audio|
+  - if !audio.is_a?(Integer)
+    %li
+      = link_to audio.url do
+        = audio.short_name
+      = form_tag songs_path, :method => 'post', remote: true do
+        = hidden_field_tag '[song][duration]', audio.duration
+        = hidden_field_tag '[song][url]', audio.url
+        = hidden_field_tag '[song][title]', audio.title
+        = hidden_field_tag '[song][artist]', audio.artist
+        = submit_tag "",:class=>"icon-plus plus inv"
+      = form_tag search_download_path, :method => 'post' do
+        = hidden_field_tag :url, audio.url
+        = hidden_field_tag :name, "#{audio.artist} - #{audio.title}"
+        = submit_tag "",:class=>"icon-download icon-large plus inv"
+      %span.comment= audio.formatted_duration

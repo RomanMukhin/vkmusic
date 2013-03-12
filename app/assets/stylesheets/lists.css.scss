@@ -1,0 +1,22 @@
+// Place all the styles related to the Lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.scrollable {
+  height: 60%;
+  overflow: auto;
+}
+
+.max-height {
+  height: 94%;
+}
+
+.no-overflow {
+  overflow: hidden;
+}
+
+
+.searching{
+  height: 92%;
+  position:relative;
+  top: -110px;
+}

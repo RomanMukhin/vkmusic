@@ -1,0 +1,43 @@
+// Place all the styles related to the Songs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#new_list input{
+  margin: 10px;
+}
+
+
+.rem-ic{
+  position:relative;
+  top:-38px;
+}
+li form{
+  height: 0px;
+}
+
+.display_none{
+  display:none !important;
+}
+.inv{
+  background:none !important;
+}
+.brand{
+  color: white !important;
+}
+
+.icon-download{
+  right: 10px;
+  top: -14px;
+  z-index:11;
+}
+.right{
+  float:right !important;
+}
+
+.span7 .icon-home{
+  position:relative !important;
+  top: 12px !important;
+}
+
+.search .comment{
+  right: -18px;
+}

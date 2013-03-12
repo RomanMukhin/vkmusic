@@ -1,0 +1,6 @@
+- lists.each do |l|
+  %li.list{:id => "list_#{l.id}"}
+    = link_to list_path(l.id), remote: true do
+      = l.title
+    = form_tag list_path(l.id), :method => 'delete', remote: true do
+      = submit_tag "", :class=>"icon-remove plus inv rem-ic"
