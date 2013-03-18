@@ -10,7 +10,7 @@ development:
   pool: 5
   timeout: 5000
   username: roman
-  password: 1111
+  password: #Password
 
 test:
   adapter: postgresql
@@ -19,7 +19,7 @@ test:
   pool: 5
   timeout: 5000
   username: roman
-  password: 1111
+  password: #Password
 
 production:
   adapter: postgresql
@@ -28,4 +28,4 @@ production:
   pool: 5
   timeout: 5000
   username: roman
-  password: 1111
+  password: #Password
