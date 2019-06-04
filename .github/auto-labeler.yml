@@ -1,0 +1,17 @@
+enable:
+  issues: false
+  prs: true
+labels:
+  'releasing':
+    include:
+      - '\b^R(C)?\d{8}\b'
+    exclude: []
+  'RELEASE':
+    include:
+      - '\b^R\d{8}\b'
+    exclude: []
+  'RC':
+    include:
+      - '\b^RC\d{8}\b'
+    exclude: []
+
