@@ -1,6 +1,9 @@
 enable:
   issues: false
   prs: true
+comments:
+  issues: ''
+  prs: ''
 labels:
   'releasing':
     include:
